@@ -57,7 +57,7 @@ public class Baseball {
 				}
 			}
 			iBall = 0;
-			iStrike = 0;
+			iStrike = 0; //주석 수정해봤
 			
 			}
 		
