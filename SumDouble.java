@@ -32,7 +32,7 @@ public class SumDouble {
 				if(iNum % 2 == 1) {
 					System.out.println("홀수 : 1 ~ " +iNum +" 까지 합은 [" +iSum + "] 입니다");
 				}
-				if(iNum % 2 == 0) {
+				else {
 					System.out.println("짝수 : 1 ~ " +iNum +" 까지 곱은 [" +iMulty + "] 입니다");
 				}
 			}	

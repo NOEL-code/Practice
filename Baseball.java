@@ -56,7 +56,7 @@ public class Baseball {
 					result = true;
 				}
 			}
-			iBall = 0;
+			iBall = 0; //박성철 말뚝
 			iStrike = 0; //주석 수정해봤
 			
 			}
