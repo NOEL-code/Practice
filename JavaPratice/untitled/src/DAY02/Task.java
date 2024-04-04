@@ -9,14 +9,10 @@ public class Task {
         Person sonny = new Person("쏘니");
         Person becoom = new Person("베컴");
 
-
-        Phone sonnyPhone = new SamsungPhone(sonny);
-        Phone becoomPhone = new ApplePhone(becoom);
+        ApplePhone becoomPhone = phoneShop.sellApplePhone(becoom);
+        SamsungPhone sonnyPhone = phoneShop.sellSamsungPhone(sonny);
 
         phoneShop.getClientList();
-
-        phoneShop.sellPhone(sonnyPhone);
-        phoneShop.sellPhone(becoomPhone);
 
         sonnyPhone.turnOn();
         becoomPhone.turnOn();
@@ -24,17 +20,21 @@ public class Task {
 }
 
 class Person{
-    String name;
+    private String name;
 
     Person(String name){
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
 
 class Phone {
     private String owner;
-    Phone(Person person) {
-        this.owner = person.name;
+    Phone(String owner) {
+        this.owner = owner;
     }
 
     public String getOwner() {
@@ -52,8 +52,8 @@ class Phone {
 
 class SamsungPhone extends Phone{
 
-    SamsungPhone(Person person) {
-        super(person);
+    SamsungPhone(String owner) {
+        super(owner);
     }
     void turnOnSound() {
         System.out.println("삐비빅");
@@ -62,8 +62,8 @@ class SamsungPhone extends Phone{
 
 class ApplePhone extends Phone{
 
-    ApplePhone(Person person) {
-        super(person);
+    ApplePhone(String owner) {
+        super(owner);
     }
     void turnOnSound() {
         System.out.println("bbeep");
@@ -79,20 +79,45 @@ class PhoneShop {
 
     private LinkedList<String> clientList = new LinkedList<>();
 
-    void sellPhone(Phone phone) {
+    ApplePhone sellApplePhone(Person person) {
         if (inventory > 0) {
-            System.out.println(phone.getOwner() + "가 핸드폰을 샀습니다.");
-            clientList.add(phone.getOwner());
+            System.out.println(person.getName() + "가 핸드폰을 샀습니다.");
+            System.out.println("남은 재고량: " + inventory);
+            String ownerName;
+            ownerName = person.getName();
+            clientList.add(ownerName);
             inventory--;
 
+            return new ApplePhone(ownerName);
         } else {
             System.out.println("Inventory is empty!");
+            return null;
+        }
+    }
+
+    SamsungPhone sellSamsungPhone(Person person) {
+        if (inventory > 0) {
+            System.out.println(person.getName() + "가 핸드폰을 샀습니다.");
+            System.out.println("남은 재고량: " + inventory);
+            String ownerName;
+            ownerName = person.getName();
+            clientList.add(ownerName);
+            inventory--;
+
+            return new SamsungPhone(ownerName);
+        } else {
+            System.out.println("Inventory is empty!");
+            return null;
         }
     }
 
     void getClientList() {
+
+        System.out.println("핸드폰 구매자 명단: ");
         for (String client : clientList) {
             System.out.println(client);
         }
+        System.out.println("명단 끝");
     }
+
 }
