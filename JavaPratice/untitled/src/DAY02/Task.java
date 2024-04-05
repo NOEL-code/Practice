@@ -43,11 +43,11 @@ class Phone {
 
     void turnOn() {
         System.out.println(owner + "이(가) 핸드폰을 켰습니다");
+
         turnOnSound();
     }
 
-    void turnOnSound() {
-    }
+    void turnOnSound() {}
 }
 
 class SamsungPhone extends Phone{
@@ -55,6 +55,7 @@ class SamsungPhone extends Phone{
     SamsungPhone(String owner) {
         super(owner);
     }
+    @Override
     void turnOnSound() {
         System.out.println("삐비빅");
     }
@@ -65,6 +66,7 @@ class ApplePhone extends Phone{
     ApplePhone(String owner) {
         super(owner);
     }
+    @Override
     void turnOnSound() {
         System.out.println("bbeep");
     }
