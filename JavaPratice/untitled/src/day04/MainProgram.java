@@ -2,7 +2,7 @@ package day04;
 
 import java.util.Scanner;
 
-public class Main {
+public class MainProgram {
     static MemberServiceImpl memberService = new MemberServiceImpl();
     static Scanner scanner = new Scanner(System.in);
     static int serviceNum = 1;

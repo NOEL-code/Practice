@@ -67,8 +67,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day04.Main" />
+    <configuration name="MainProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day04.MainProgram" />
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -82,7 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainProgram" />
       </list>
     </recent_temporary>
   </component>
@@ -105,7 +105,7 @@
       <workItem from="1712198144062" duration="6418000" />
       <workItem from="1712210012384" duration="1935000" />
       <workItem from="1712532393499" duration="2832000" />
-      <workItem from="1712535247748" duration="12085000" />
+      <workItem from="1712535247748" duration="12754000" />
     </task>
     <servers />
   </component>
