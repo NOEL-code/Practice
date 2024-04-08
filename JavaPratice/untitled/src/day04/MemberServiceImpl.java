@@ -3,7 +3,7 @@ package day04;
 
 public class MemberServiceImpl implements MemberService  {
 
-    private MemoryMemberDAO memoryMemberDAO = new MemoryMemberDAO();
+    private final MemoryMemberDAO memoryMemberDAO = new MemoryMemberDAO();
 
     @Override
     public void join(Member member) {
