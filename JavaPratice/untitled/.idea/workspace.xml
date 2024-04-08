@@ -46,6 +46,7 @@
   "keyToString": {
     "Application.EX04.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.MainProgram.executor": "Run",
     "Application.Task.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -105,7 +106,7 @@
       <workItem from="1712198144062" duration="6418000" />
       <workItem from="1712210012384" duration="1935000" />
       <workItem from="1712532393499" duration="2832000" />
-      <workItem from="1712535247748" duration="12754000" />
+      <workItem from="1712535247748" duration="14536000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,10 @@ public class MainProgram {
     static int serviceNum = 1;
     static boolean isLogin = false;
 
+
+    static String name;
+    static Long ID;
+    static String PW;
     static Member nowUser;
 
     public static void main(String[] args) {
@@ -42,8 +46,6 @@ public class MainProgram {
                 break;
             }
         }
-
-
     }
 
     public static void initialMention() {
@@ -62,36 +64,10 @@ public class MainProgram {
 
     public static void join() {
         Member member = new Member();
-
-        String name;
-        Long ID = 0L;
-        String PW;
-
+        ID = 0L;
         System.out.println("회원가입 서비스를 선택하셨습니다.");
 
-
-
-        while (true) {
-            try {
-                System.out.print("아이디를 입력해주세요(숫자만 입력가능). :");
-                if (scanner.hasNextLong()) {
-                    ID = scanner.nextLong();
-                    Member checkMember = memberService.findById(ID);
-                    if (checkMember == null) {
-                        break;
-                    }
-                    System.out.println("아이디가 중복 되었습니다. 다른 아이디로 입력해주세요");
-                } else {
-                    System.out.println("아이디에 숫자만 입력해주세요.");
-                    scanner.next(); // 잘못된 입력을 제거하고 다음 입력을 받음
-                }
-            } catch (Exception e) {
-                System.out.println("아이디에 숫자만 입력해주세요.");
-                scanner.next(); // 잘못된 입력을 제거하고 다음 입력을 받음
-            }
-        }
-
-
+        checkJoinInputId();
 
         System.out.print("이름을 입력해주세요. :");
         name = scanner.next();
@@ -108,12 +84,9 @@ public class MainProgram {
     }
 
     public static void login(){
-        Long ID;
-        String PW;
 
         System.out.println("로그인 서비스를 선택하셨습니다.");
-        System.out.print("아이디를 입력해주세요.(숫자만 입력가능) :");
-        ID = scanner.nextLong();
+        checkLoginInputId();
         System.out.print("비밀번호를 입력해주세요. :");
         PW = scanner.next();
 
@@ -129,8 +102,6 @@ public class MainProgram {
     }
 
     public static void update(){
-        String name;
-        String PW;
 
         System.out.print("변경할 이름을 입력해주세요. :");
         name = scanner.next();
@@ -155,4 +126,46 @@ public class MainProgram {
         nowUser = null;
     }
 
+    public static void checkJoinInputId(){
+        while (true) {
+            try {
+                System.out.print("아이디를 입력해주세요(숫자만 입력가능). :");
+                if (scanner.hasNextLong()) {
+                    ID = scanner.nextLong();
+                    Member checkMember = memberService.findById(ID);
+                    if (checkMember == null) {
+                        break;
+                    }
+                    System.out.println("아이디가 중복 되었습니다. 다른 아이디로 입력해주세요");
+                } else {
+                    System.out.println("아이디에 숫자만 입력해주세요.");
+                    scanner.next(); // 잘못된 입력을 제거하고 다음 입력을 받음
+                }
+            } catch (Exception e) {
+                System.out.println("아이디에 숫자만 입력해주세요.");
+                scanner.next(); // 잘못된 입력을 제거하고 다음 입력을 받음
+            }
+        }
+    }
+
+    public static void checkLoginInputId(){
+        while (true) {
+            try {
+                System.out.print("아이디를 입력해주세요(숫자만 입력가능). :");
+                if (scanner.hasNextLong()) {
+                    ID = scanner.nextLong();
+                    break;
+                } else {
+                    System.out.println("아이디에 숫자만 입력해주세요.");
+                    scanner.next(); // 잘못된 입력을 제거하고 다음 입력을 받음
+                }
+            } catch (Exception e) {
+                System.out.println("아이디에 숫자만 입력해주세요.");
+                scanner.next();
+                // 잘못된 입력을 제거하고 다음 입력을 받음
+            }
+
+
+        }
+    }
 }

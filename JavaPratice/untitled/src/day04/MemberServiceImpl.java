@@ -25,13 +25,13 @@ public class MemberServiceImpl implements MemberService  {
     @Override
     public Member login(Long id, String password) {
         Member member = memoryMemberDAO.findById(id);
-        if(member.getPassword().equals(password)) {
+        if (member != null && member.getPassword().equals(password)) {
             return member;
-        }
-        else {
+        } else {
             return null;
         }
     }
+
 
     @Override
     public Member findById(Long id) {
