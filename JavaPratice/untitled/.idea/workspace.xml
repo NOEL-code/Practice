@@ -47,7 +47,12 @@
     &quot;Application.EX04.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Report.executor&quot;: &quot;Run&quot;,
     &quot;Application.Task.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -59,6 +64,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/noel/신한투자증권/JavaPratice/untitled/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,7 +73,7 @@
       <recent name="day04" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Report">
     <configuration name="MainProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day04.MainProgram" />
       <module name="untitled" />
@@ -81,8 +87,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Report" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day05.practice01.Report" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day05.practice01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Report" />
         <item itemvalue="Application.MainProgram" />
       </list>
     </recent_temporary>
@@ -107,7 +127,9 @@
       <workItem from="1712210012384" duration="1935000" />
       <workItem from="1712532393499" duration="2832000" />
       <workItem from="1712535247748" duration="16523000" />
-      <workItem from="1712622315590" duration="3343000" />
+      <workItem from="1712622315590" duration="16124000" />
+      <workItem from="1712817180170" duration="744000" />
+      <workItem from="1712817996648" duration="13000" />
     </task>
     <servers />
   </component>
