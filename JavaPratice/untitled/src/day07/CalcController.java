@@ -18,6 +18,6 @@ public class CalcController {
 
     public int minus(int num1, int num2){
         ParamReqDTO paramReqDTO = new ParamReqDTO(num1, num2);
-
+        return num1;
     }
 }
