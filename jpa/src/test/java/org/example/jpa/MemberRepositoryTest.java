@@ -1,11 +1,12 @@
 package org.example.jpa;
 
 import org.assertj.core.api.Assertions;
+import org.example.jpa.domain.Member1;
+import org.example.jpa.domain.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
-import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 public class MemberRepositoryTest {
