@@ -37,4 +37,14 @@ public class OrderService {
 
         return order.getId();
     }
+
+    @Transactional
+    public void cancelOrder(Long orderId){
+        Order order = orderRepository.findById(orderId);
+        order.cancelOrder();
+    }
+
+//    public List<Order> findOrder(OrderSearch orderSearch){
+//
+//    }
 }

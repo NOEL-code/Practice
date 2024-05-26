@@ -3,6 +3,7 @@ package org.example.jpa.service;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.example.jpa.domain.Member;
+import org.example.jpa.domain.Order;
 import org.example.jpa.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,5 +39,4 @@ public class MemberService {
     public Member findById(Long id) {
         return memberRepository.findById(id);
     }
-
 }
