@@ -10,11 +10,11 @@ import jakarta.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address;
+import lombok.Setter;
 
-@Getter
+@Getter @Setter
 @Entity
-public class Member1 {
+public class Member {
 
     @Id @GeneratedValue
     @Column(name = "member_id")
@@ -25,7 +25,7 @@ public class Member1 {
     @Embedded
     private Address address;
 
-    @OneToMany(mappedBy = "member1")
+    @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 
 }

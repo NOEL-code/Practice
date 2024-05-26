@@ -1,12 +1,13 @@
 package org.example.jpa;
 
 import org.assertj.core.api.Assertions;
-import org.example.jpa.domain.Member1;
-import org.example.jpa.domain.MemberRepository;
+import org.example.jpa.domain.Member;
+import org.example.jpa.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 public class MemberRepositoryTest {
@@ -15,16 +16,16 @@ public class MemberRepositoryTest {
     private MemberRepository memberRepository;
 
     @Test
-    @Tran  sactional
+    @Transactional
     @Rollback(false)
     public void testMember() throws Exception {
-            Member1 member = new Member1();
-            member.setUsername("memberA");
+            Member member = new Member();
+            member.setName("memberA");
 
             Long saved = memberRepository.save(member);
-            Member1 findMember = memberRepository.find(saved);
+            Member findMember = memberRepository.findById(saved);
 
-        Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
+        Assertions.assertThat(findMember.getName()).isEqualTo(member.getName());
         Assertions.assertThat(findMember.getId()).isEqualTo(saved);
         Assertions.assertThat(findMember).isEqualTo(member);
     }
